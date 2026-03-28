@@ -709,6 +709,12 @@ ul {
   font-size: var(--text-base);
 }
 
+.about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ===== EXPERIENCE SECTION ===== */
 .experience-grid {
   display: grid;
