@@ -384,14 +384,14 @@ ul {
 
 .intro-text {
   font-family: var(--font-mono);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--accent);
   margin-bottom: var(--space-sm);
   font-weight: 400;
 }
 
 .main-heading {
-  font-size: clamp(var(--text-4xl), 8vw, var(--text-5xl));
+  font-size: clamp(40px, 6vw, 64px);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.1;
@@ -399,7 +399,7 @@ ul {
 }
 
 .sub-heading {
-  font-size: clamp(var(--text-3xl), 6vw, var(--text-4xl));
+  font-size: clamp(28px, 4.5vw, 40px);
   font-weight: 600;
   color: var(--text-secondary);
   line-height: 1.2;
@@ -410,12 +410,12 @@ ul {
   display: grid;
   gap: var(--space-md);
   max-width: 540px;
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   line-height: 1.7;
 }
 
 .hero-description p {
-  font-size: var(--text-xl);
+  font-size: inherit;
   line-height: 1.7;
   color: var(--text-secondary);
 }
