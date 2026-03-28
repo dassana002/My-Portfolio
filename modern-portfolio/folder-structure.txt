@@ -1,0 +1,17 @@
+modern-portfolio/
+├── index.html          # Main HTML file
+├── css/
+│   └── style.css       # Main stylesheet
+├── js/
+│   └── (future JavaScript files)
+├── images/
+│   └── (profile images, project screenshots)
+└── assets/
+    └── (icons, favicons, other assets)
+
+This structure keeps your project organized:
+- index.html: The main page
+- css/: All stylesheets
+- js/: JavaScript files (for future enhancements)
+- images/: Photos and screenshots
+- assets/: Icons, favicons, and other assets
