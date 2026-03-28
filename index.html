@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dassana Thathsara - Full-Stack Developer specializing in modern web technologies, JavaScript, Java, Python, and database management. Building scalable and user-friendly web applications.">
+    <meta name="keywords" content="full-stack developer, web developer, javascript, java, python, html, css, react, node.js, mongodb, mysql, postgresql, software engineer">
+    <meta name="author" content="Dassana Thathsara">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dassana Thathsara - Full-Stack Developer">
+    <meta property="og:description" content="Full-Stack Developer specializing in modern web technologies and scalable applications">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="img/DSC_2367.JPG">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dassana Thathsara - Full-Stack Developer">
+    <meta name="twitter:description" content="Full-Stack Developer specializing in modern web technologies">
+    <meta name="twitter:image" content="img/DSC_2367.JPG">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
     <!--Website Title -->
     <title> My Portfolio </title>
 
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
 
     <!--  External Css  -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+    <!-- Skip Navigation Link for Accessibility -->
+<!--    <a href="#main-content" class="skip-link">Skip to main content</a>-->
+
     <!-- Portfolio Grid Container - Master Layout -->
     <div class="portfolio-container">
 
@@ -40,7 +62,7 @@
         <!-- Left Sidebar - Email -->
         <aside class="sidebar-left">
             <div class="email-section">
-                <a href="mailto:dassana00@gmail.com" class="email-link" aria-label="Send Email to dassana00@gmail.com">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dassana00@gmail.com" class="email-link" aria-label="Send Email to dassana00@gmail.com">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <div class="sidebar-line"></div>
@@ -61,7 +83,7 @@
         </aside>
 
         <!-- Main Content Area -->
-        <main class="portfolio-main">
+        <main class="portfolio-main" id="main-content" role="main">
 
             <!-- Hero Section -->
             <section id="home" class="section hero-section">
@@ -94,7 +116,11 @@
 
                     <div class="hero-image">
                         <div class="image-container">
-                            <img src="img/DSC_2367.JPG" alt="Dassana Thathsara - Full-Stack Developer" class="profile-photo">
+                            <img src="img/DSC_2367.JPG"
+                                 alt="Dassana Thathsara - Full-Stack Developer headshot"
+                                 class="profile-photo"
+                                 loading="lazy"
+                                 decoding="async">
                         </div>
                     </div>
                 </div>
@@ -104,7 +130,6 @@
             <section id="about" class="section about-section">
                 <div class="section-grid">
                     <h2 class="section-title">
-                        <span class="section-number">01.</span>
                         About Me
                     </h2>
 
@@ -144,7 +169,7 @@
                                             <div class="skill-progress" data-level="85"></div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="skill-item">
                                         <div class="skill-header">
                                             <span class="skill-name">Backend Development</span>
@@ -154,7 +179,7 @@
                                             <div class="skill-progress" data-level="80"></div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="skill-item">
                                         <div class="skill-header">
                                             <span class="skill-name">Database Management</span>
@@ -164,7 +189,7 @@
                                             <div class="skill-progress" data-level="75"></div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="skill-item">
                                         <div class="skill-header">
                                             <span class="skill-name">Software Engineering</span>
@@ -185,7 +210,6 @@
             <section id="experience" class="section experience-section">
                 <div class="section-grid">
                     <h2 class="section-title">
-                        <span class="section-number">02.</span>
                         Where I've Worked
                     </h2>
 
@@ -217,7 +241,6 @@
             <section id="projects" class="section projects-section">
                 <div class="section-grid">
                     <h2 class="section-title">
-                        <span class="section-number">03.</span>
                         Some Things I've Built
                     </h2>
 
@@ -331,8 +354,7 @@
             <section id="contact" class="section contact-section">
                 <div class="section-grid">
                     <h2 class="section-title">
-                        <span class="section-number">04.</span>
-                        What's Next?
+                        Get In Touch
                     </h2>
 
                     <div class="contact-grid">
@@ -363,50 +385,5 @@
             </div>
         </footer>
     </div>
-    <!-- End Portfolio Container -->
-
-    <!-- JavaScript for Professional Levels Animation -->
-    <script>
-        // Intersection Observer for triggering skill level animations
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const skillsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    skillsObserver.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe the professional levels section
-        document.addEventListener('DOMContentLoaded', () => {
-            const professionalLevels = document.querySelector('.professional-levels');
-            if (professionalLevels) {
-                skillsObserver.observe(professionalLevels);
-            }
-        });
-
-        // Optional: Add click interaction for skill bars
-        document.addEventListener('DOMContentLoaded', () => {
-            const skillItems = document.querySelectorAll('.skill-item');
-
-            skillItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const progress = item.querySelector('.skill-progress');
-                    const currentWidth = progress.style.width;
-
-                    // Quick reset and re-animate effect
-                    progress.style.width = '0%';
-                    setTimeout(() => {
-                        progress.style.width = currentWidth;
-                    }, 100);
-                });
-            });
-        });
-    </script>
 </body>
 </html>
