@@ -200,17 +200,25 @@ ul {
 .sidebar-left {
   grid-area: sidebar-left;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: var(--space-2xl);
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
+  height: 100vh;
+  z-index: 10;
 }
 
 .sidebar-right {
   grid-area: sidebar-right;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  padding-bottom: var(--space-2xl);
+  position: sticky;
+  top: 50vh;
+  transform: translateY(-50%);
+  height: 100vh;
+  z-index: 10;
 }
 
 .email-section,
@@ -222,18 +230,21 @@ ul {
 }
 
 .email-link {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: var(--text-lg);
   color: var(--text-muted);
-  letter-spacing: 0.1em;
   transition: var(--transition-base);
+  border-radius: 8px;
 }
 
 .email-link:hover {
-  color: var(--accent);
+  color: #ea4335; /* Gmail red */
   transform: translateY(-3px);
+  background-color: var(--tertiary-bg);
 }
 
 .social-links {
@@ -244,18 +255,38 @@ ul {
 }
 
 .social-links a {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: var(--text-lg);
   color: var(--text-muted);
-  letter-spacing: 0.1em;
   transition: var(--transition-base);
+  border-radius: 8px;
 }
 
 .social-links a:hover {
   color: var(--accent);
   transform: translateY(-3px);
+  background-color: var(--tertiary-bg);
+}
+
+/* Platform-specific hover colors */
+.social-links a[href*="github"]:hover {
+  color: #333;
+}
+
+.social-links a[href*="linkedin"]:hover {
+  color: #0077b5;
+}
+
+.social-links a[href*="facebook"]:hover {
+  color: #1877f2;
+}
+
+.social-links a[href*="instagram"]:hover {
+  color: #e4405f;
 }
 
 .sidebar-line {
@@ -1041,18 +1072,44 @@ ul {
 
 /* Tablet: 768px - 1023px */
 @media (max-width: 1023px) {
+  :root {
+    --sidebar-width: 50px;
+  }
+
   .portfolio-container {
     grid-template-areas:
-      "header"
-      "main"
-      "footer";
-    grid-template-columns: 1fr;
+      "sidebar-left header sidebar-right"
+      "sidebar-left main sidebar-right"
+      "footer footer footer";
+    grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
     grid-template-rows: var(--header-height) 1fr auto;
   }
 
   .sidebar-left,
   .sidebar-right {
-    display: none;
+    height: 100vh;
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .email-link,
+  .social-links a {
+    font-size: var(--text-base);
+  }
+
+  .email-link {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-links a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-links li {
+    margin-bottom: var(--space-xs);
   }
 
   .portfolio-header {
@@ -1187,6 +1244,39 @@ ul {
 
 /* Mobile Medium: 480px - 599px */
 @media (max-width: 599px) {
+  :root {
+    --sidebar-width: 40px;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    height: 100vh;
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .email-link {
+    width: 25px;
+    height: 25px;
+    font-size: var(--text-sm);
+  }
+
+  .social-links a {
+    width: 25px;
+    height: 25px;
+    font-size: var(--text-sm);
+  }
+
+  .social-links li {
+    margin-bottom: 6px;
+  }
+
+  .sidebar-line {
+    width: 1px;
+    height: 60px;
+  }
+
   .portfolio-header {
     padding: 0 var(--space-md);
   }
@@ -1215,6 +1305,38 @@ ul {
 
 /* Mobile Small: 320px - 479px */
 @media (max-width: 479px) {
+  :root {
+    --sidebar-width: 35px;
+  }
+
+  .sidebar-left,
+  .sidebar-right {
+    height: 100vh;
+    position: sticky;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .email-link {
+    width: 20px;
+    height: 20px;
+    font-size: var(--text-xs);
+  }
+
+  .social-links a {
+    width: 20px;
+    height: 20px;
+    font-size: var(--text-xs);
+  }
+
+  .social-links li {
+    margin-bottom: 4px;
+  }
+
+  .sidebar-line {
+    height: 40px;
+  }
+
   .portfolio-header {
     padding: 0 var(--space-sm);
   }
