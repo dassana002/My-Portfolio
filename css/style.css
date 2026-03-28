@@ -404,7 +404,27 @@ ul {
   border-radius: var(--border-radius);
 }
 
+/* Grid-based decorative frame around the image */
 .hero-image .image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background-image: 
+    linear-gradient(var(--cyan) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cyan) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 0;
+  opacity: 0.3;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  z-index: -2;
+}
+
+/* Main cyan overlay on image */
+.hero-image .image-wrapper::after {
   content: '';
   position: absolute;
   top: 0;
@@ -416,28 +436,79 @@ ul {
   border-radius: var(--border-radius);
   transition: var(--transition);
   opacity: 0.3;
+  z-index: 2;
 }
 
-.hero-image .image-wrapper::after {
+/* Grid frame corners and edges */
+.hero-image .image-wrapper {
+  --grid-size: 20px;
+  --corner-size: 40px;
+}
+
+/* Grid corner decorations */
+.hero-image .image-wrapper:before {
   content: '';
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid var(--cyan);
-  border-radius: var(--border-radius);
+  top: -25px;
+  left: -25px;
+  width: var(--corner-size);
+  height: var(--corner-size);
+  border-left: 2px solid var(--cyan);
+  border-top: 2px solid var(--cyan);
+  border-radius: var(--border-radius) 0 0 0;
+  z-index: 3;
+}
+
+/* Add additional grid decorative elements */
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background-image: 
+    linear-gradient(var(--cyan) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cyan) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  border-radius: calc(var(--border-radius) + 10px);
   transition: var(--transition);
   z-index: -1;
 }
 
-.hero-image:hover .image-wrapper::before {
-  opacity: 0;
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid var(--cyan);
+  border-top: 2px solid var(--cyan);
+  border-radius: 0 var(--border-radius) 0 0;
+  opacity: 0.7;
+  transition: var(--transition);
+  z-index: 3;
+}
+
+/* Hover effects for grid frame */
+.hero-image:hover::before {
+  opacity: 0.4;
+  transform: scale(1.02);
+}
+
+.hero-image:hover::after {
+  opacity: 1;
+  transform: translate(5px, -5px);
 }
 
 .hero-image:hover .image-wrapper::after {
-  top: 15px;
-  left: 15px;
+  opacity: 0;
 }
 
 .profile-image {
@@ -448,10 +519,140 @@ ul {
   object-fit: cover;
   filter: grayscale(100%) contrast(1.2);
   transition: var(--transition);
+  z-index: 1;
 }
 
-.hero-image:hover .profile-image {
-  filter: none;
+/* Additional grid decorative elements */
+.hero-image .image-wrapper:before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 40px;
+  height: 40px;
+  border-left: 2px solid var(--cyan);
+  border-top: 2px solid var(--cyan);
+  border-radius: var(--border-radius) 0 0 0;
+  opacity: 0.8;
+  transition: var(--transition);
+  z-index: 3;
+}
+
+/* Bottom right corner accent */
+.hero-image .image-wrapper:after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+  border-radius: 0 0 var(--border-radius) 0;
+  opacity: 0.8;
+  transition: var(--transition);
+  z-index: 3;
+}
+
+/* Grid pattern background */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  right: -40px;
+  bottom: -40px;
+  background-image: 
+    linear-gradient(var(--cyan) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cyan) 1px, transparent 1px),
+    radial-gradient(circle at 20px 20px, var(--cyan) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 40px 40px;
+  opacity: 0.15;
+  border-radius: calc(var(--border-radius) + 15px);
+  transition: var(--transition);
+  z-index: -1;
+}
+
+/* Additional corner accents - top right */
+.hero-image::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 60px;
+  height: 60px;
+  border-right: 2px solid var(--cyan);
+  border-top: 2px solid var(--cyan);
+  border-radius: 0 var(--border-radius) 0 0;
+  opacity: 0.6;
+  transition: var(--transition);
+  z-index: 3;
+}
+
+/* Image overlay */
+.hero-image .profile-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--cyan);
+  mix-blend-mode: multiply;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  opacity: 0.3;
+  z-index: 2;
+}
+
+/* Enhanced hover effects for grid frame */
+.hero-image:hover::before {
+  opacity: 0.25;
+  transform: scale(1.05);
+  animation: gridPulse 2s ease-in-out infinite;
+}
+
+.hero-image:hover::after {
+  opacity: 1;
+  transform: translate(8px, -8px);
+}
+
+.hero-image:hover .image-wrapper:before {
+  opacity: 1;
+  transform: translate(-5px, -5px);
+}
+
+.hero-image:hover .image-wrapper:after {
+  opacity: 1;
+  transform: translate(5px, 5px);
+}
+
+.hero-image:hover .profile-image::before {
+  opacity: 0;
+}
+
+/* Grid pulse animation */
+@keyframes gridPulse {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Subtle floating animation for the image */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero-image .profile-image {
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-content p {
@@ -1052,6 +1253,32 @@ ul {
     width: 250px;
     height: 250px;
   }
+
+  /* Adjust grid frame for tablet */
+  .hero-image::before {
+    background-size: 18px 18px, 18px 18px, 35px 35px;
+  }
+
+  .hero-image::after {
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero-image .image-wrapper:before {
+    top: -20px;
+    left: -20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .hero-image .image-wrapper:after {
+    bottom: -20px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1080,6 +1307,36 @@ ul {
   .hero-image .image-wrapper {
     width: 250px;
     height: 250px;
+  }
+
+  /* Adjust grid frame for mobile */
+  .hero-image::before {
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background-size: 15px 15px, 15px 15px, 30px 30px;
+  }
+
+  .hero-image::after {
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-image .image-wrapper:before {
+    top: -20px;
+    left: -20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-image .image-wrapper:after {
+    bottom: -20px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
   }
 
   .header {
