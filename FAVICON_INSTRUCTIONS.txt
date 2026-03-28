@@ -1,0 +1,40 @@
+<!-- 
+FAVICON SETUP INSTRUCTIONS
+
+Your HTML now includes favicon references:
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+To add an actual favicon.ico file, you have several options:
+
+OPTION 1 - Online Generator (Recommended):
+1. Go to https://favicon.io/favicon-generator/
+2. Create a simple text-based favicon with your initials
+3. Download the generated favicon.ico
+4. Place it in your root directory (same level as index.html)
+
+OPTION 2 - Use a Simple Image:
+1. Create a 16x16 or 32x32 pixel image with your initials or logo
+2. Convert it to .ico format using online tools like:
+   - https://convertio.co/png-ico/
+   - https://favicon.io/favicon-converter/
+3. Save as favicon.ico in your root directory
+
+OPTION 3 - Create with Design Tools:
+1. Design a 16x16, 32x32, or 48x48 pixel icon in Photoshop/GIMP
+2. Export as ICO format
+3. Place in root directory
+
+The favicon will then appear in:
+- Browser tabs
+- Bookmarks
+- Browser history
+- Desktop shortcuts
+
+Current file structure should be:
+Portfolio/
+├── index.html (✓ Updated with favicon links)
+├── css/
+│   └── style.css
+└── favicon.ico (← Add this file)
+-->
