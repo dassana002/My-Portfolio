@@ -215,6 +215,8 @@ img {
   display: flex;
   align-items: center;
   padding: 60px 20px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .hero-grid {
@@ -227,7 +229,6 @@ img {
 
 .hero-content {
   max-width: 600px;
-  margin-left: 80px;
 }
 
 .intro-text {
@@ -309,7 +310,6 @@ img {
 .hero-image {
   display: flex;
   justify-content: center;
-  margin-right: 80px;
 }
 
 .image-container {
@@ -338,6 +338,11 @@ img {
 }
 
 /* ===== ABOUT SECTION ===== */
+.about-section {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .about-grid {
   display: flex;
   gap: 60px;
@@ -345,7 +350,6 @@ img {
 
 .about-text {
   flex: 3;
-  margin-left: 80px;
 }
 
 .about-text p {
@@ -354,7 +358,6 @@ img {
 
 .about-image {
   flex: 2;
-  margin-right: 80px;
 }
 
 /* ===== TECH LIST ===== */
@@ -452,6 +455,11 @@ img {
 }
 
 /* ===== EXPERIENCE SECTION ===== */
+.experience-section {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .experience-grid {
   display: flex;
   flex-direction: column;
@@ -500,6 +508,11 @@ img {
 }
 
 /* ===== PROJECTS SECTION ===== */
+.projects-section {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .projects-grid {
   display: flex;
   flex-direction: column;
@@ -613,6 +626,11 @@ img {
 }
 
 /* ===== CONTACT SECTION ===== */
+.contact-section {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
 .contact-grid {
   text-align: center;
   max-width: 600px;
@@ -694,6 +712,15 @@ img {
     padding-right: 60px;
   }
 
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section,
+  .contact-section {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
   .hero-grid {
     flex-direction: column;
     text-align: center;
@@ -729,6 +756,15 @@ img {
   .portfolio-container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .hero-section,
+  .about-section,
+  .experience-section,
+  .projects-section,
+  .contact-section {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* Hide sidebars on mobile */
