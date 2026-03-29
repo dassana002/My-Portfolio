@@ -412,7 +412,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: var(--grid-gap-xl);
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
 
@@ -423,38 +423,37 @@ ul {
 
 .intro-text {
   font-family: var(--font-mono);
-  font-size: var(--text-base);
+  font-size: var(--text-md);
   color: var(--accent);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 .main-heading {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(36px, 8vw, 72px);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.1;
-  margin-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
 }
 
 .sub-heading {
-  font-size: clamp(28px, 4.5vw, 40px);
+  font-size: clamp(24px, 5vw, 48px);
   font-weight: 600;
   color: var(--text-secondary);
   line-height: 1.2;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .hero-description {
   display: grid;
   gap: var(--space-md);
   max-width: 540px;
-  font-size: var(--text-lg);
-  line-height: 1.7;
 }
 
 .hero-description p {
-  font-size: inherit;
+  font-size: var(--text-lg);
   line-height: 1.7;
   color: var(--text-secondary);
 }
@@ -499,7 +498,7 @@ ul {
 .hero-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -1515,19 +1514,15 @@ ul {
   }
 
   .main-heading {
-    font-size: clamp(var(--text-3xl), 7vw, var(--text-4xl));
+    font-size: clamp(32px, 4vw, 48px);
   }
 
   .sub-heading {
-    font-size: clamp(var(--text-2xl), 5vw, var(--text-3xl));
-  }
-
-  .hero-description {
-    font-size: var(--text-lg);
+    font-size: clamp(12px, 3vw, 22px);
   }
 
   .hero-description p {
-    font-size: var(--text-lg);
+    font-size: var(--text-base);
     line-height: 1.6;
   }
 }
@@ -1631,23 +1626,19 @@ ul {
   }
 
   .main-heading {
-    font-size: clamp(var(--text-2xl), 6vw, var(--text-3xl));
+    font-size: clamp(28px, 6vw, 36px);
   }
 
   .sub-heading {
-    font-size: clamp(var(--text-xl), 4vw, var(--text-2xl));
+    font-size: clamp(18px, 4vw, 24px);
   }
 
   .intro-text {
-    font-size: var(--text-base);
-  }
-
-  .hero-description {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
   }
 
   .hero-description p {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     line-height: 1.6;
   }
 
