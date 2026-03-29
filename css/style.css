@@ -339,6 +339,7 @@ img {
 
 .about-text {
   flex: 3;
+  margin-left: 80px;
 }
 
 .about-text p {
@@ -347,6 +348,7 @@ img {
 
 .about-image {
   flex: 2;
+  margin-right: 80px;
 }
 
 /* ===== TECH LIST ===== */
