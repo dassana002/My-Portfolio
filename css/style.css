@@ -231,36 +231,49 @@ img {
 }
 
 .intro-text {
-  font-size: 16px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
   color: #64ffda;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 .main-heading {
-  font-size: 60px;
-  font-weight: 700;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
   color: #ccd6f6;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
 
 .sub-heading {
-  font-size: 40px;
-  font-weight: 600;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 500;
   color: #8892b0;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  line-height: 1.4;
 }
 
 .hero-description {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero-description p {
-  font-size: 18px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   color: #8892b0;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+  line-height: 1.7;
 }
 
 .tech-link {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 500;
   color: #64ffda;
 }
 
@@ -271,13 +284,15 @@ img {
 /* ===== CTA BUTTON ===== */
 .cta-button {
   display: inline-block;
-  padding: 20px 40px;
+  padding: 16px 32px;
   border: 2px solid #64ffda;
   border-radius: 4px;
   color: #64ffda;
-  font-size: 16px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 16px;
+  letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
