@@ -71,10 +71,11 @@ img {
   height: 80px;
 }
 
-.nav-brand a {
-  font-size: 24px;
+.nav-brand{
+  font-size: px;
   font-weight: 700;
-  color: #64ffda;
+  color: #848484;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-menu {
