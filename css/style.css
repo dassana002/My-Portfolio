@@ -281,6 +281,12 @@ img {
   text-decoration: underline;
 }
 
+/* ===== HIGHLIGHT TEXT ===== */
+.highlight {
+  color: #64ffda;
+  font-weight: 500;
+}
+
 /* ===== CTA BUTTON ===== */
 .cta-button {
   display: inline-block;
